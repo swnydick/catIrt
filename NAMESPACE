@@ -1,0 +1,42 @@
+# C Source Code (package name, not original file name):
+useDynLib(catIrt)
+
+# Imported Packages
+importFrom(numDeriv, hessian)
+
+# Main CAT Functions:
+export(catIrt, simIrt)
+
+# Information/Item Selection Functions:
+export(FI, FI.brm, FI.grm)
+export(KL, KL.brm, KL.grm)
+export(itChoose)
+
+# Estimation Functions:
+export(mleEst, wleEst, bmeEst, eapEst)
+
+# S3 Methods ("[.")
+S3method("[", brm)
+S3method("[", grm)
+
+# S3 Methods ("[.<-")
+S3method("[<-", brm)
+S3method("[<-", grm)
+
+# S3 Methods (FI):
+S3method(FI, default)
+S3method(FI, brm)
+S3method(FI, grm)
+
+# S3 Methods (KL):
+S3method(KL, default)
+S3method(KL, brm)
+S3method(KL, grm)
+
+# S3 Methods (catIrt)
+S3method(print, catIrt)
+S3method(summary, catIrt)
+S3method(plot, catIrt)
+
+# S3 Methods (summary.catIrt)
+S3method(print, summary.catIrt)
