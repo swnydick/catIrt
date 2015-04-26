@@ -167,8 +167,7 @@ extend the interval until the end points of the (modified) range are opposite si
 }
 
 \seealso{
-\code{\link{catIrt}}, \code{\link[irtoys]{eap}},
-\code{\link{hessian}}, \code{\link[irtoys]{mlebme}},
+\code{\link{catIrt}}, \code{\link{hessian}},
 \code{\link{simIrt}}, \code{\link{uniroot}}
 }
 
