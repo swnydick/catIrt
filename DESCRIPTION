@@ -12,7 +12,7 @@ Suggests: irtoys, ltm, catR
 Description: Functions designed to simulate data that conform to basic
           unidimensional IRT models (for now 3-parameter binary response models
           and graded response models) along with Post-Hoc CAT simulations of
-          those models with various item selection methods, ability estimation
+          those models given various item selection methods, ability estimation
           methods, and termination criteria.
 License: GPL (>= 2)
 LazyLoad: yes
