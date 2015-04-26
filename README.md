@@ -12,9 +12,8 @@ install.packages("catIrt")
 or (to install the most current source package from github)
 
 ```R
-pkg <- "devtools"
-if(length(find.package(pkg, quiet = TRUE)) == 0)
-  install.packages(pkg)
+if(length(find.package("devtools", quiet = TRUE)) == 0)
+  install.packages("devtools")
 devtools::install_github("swnydick/catIrt")
 ```
 
