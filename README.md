@@ -17,4 +17,4 @@ if(length(find.package("devtools", quiet = TRUE)) == 0)
 devtools::install_github("swnydick/catIrt")
 ```
 
-The first two lines of the second code block simply installs the devtools package if R cannot find its location. The devtools package contains the `install_github` function and is needed to easily install packages from github).
+The first two lines of the second code block simply installs the devtools package if R cannot find its location. The devtools package contains the `install_github` function and is needed to easily install packages from github.
