@@ -1,6 +1,12 @@
 \name{NEWS}
 \title{Changes/Updates to the catIrt Package}
 
+\section{Changes in version 0.6-0}{
+  \itemize{
+    \item Removed the implicit rounding in the estimation functions.
+  }
+}
+
 \section{Changes in version 0.5-0}{
   \itemize{
     \item Wrote all of the probability and derivatives of probability functions
