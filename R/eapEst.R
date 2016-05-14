@@ -56,7 +56,7 @@ function(resp,                             # The vector of responses
 
 # The Likelihood function used in the EAP integration:
   LikFun <- function(...){
-    exp(get(paste("logLik.", mod, sep = ""))(...))
+    exp(get(paste0("logLik.", mod))(...))
   } # END LikFun FUNCTION
 
 # For each person:

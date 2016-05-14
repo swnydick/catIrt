@@ -44,9 +44,9 @@ function(resp,                         # The vector of responses
   est <- NULL # a vector for estimates
   
 # Then, maximize the loglikelihood function over that interval for each person:
+  likFun <- get(paste0("logLik.", mod))
   for(i in 1:dim(resp)[1]){
-    likFun <- paste("logLik.", mod, sep = "")
-    est[i] <- optimize(get(likFun), lower = l, upper = u, maximum = TRUE,
+    est[i] <- optimize(likFun, lower = l, upper = u, maximum = TRUE,
                        u = resp[i, ], params = params,
                        type = "MLE")$max
   } # END for i LOOP

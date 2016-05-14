@@ -44,12 +44,12 @@ function(resp,                         # The vector of responses
   d   <- NULL # a vector of corrections
   
 # Then, maximize the loglikelihood function over that interval for each person:
+  lderFun <- get(paste0("lder1.", mod))
   for(i in 1:dim(resp)[1]){
-    lderFun <- paste("lder1.", mod, sep = "")
-    est[i]  <- uniroot(get(lderFun), lower = l, upper = u, extendInt = "yes",
+    est[i]  <- uniroot(lderFun, lower = l, upper = u, extendInt = "yes",
                        u = resp[i, ], params = params, type = "WLE")$root
-    d[i]    <- {get(lderFun)(u = resp[i, ], theta = est[i], params = params, type = "WLE") -
-    	          get(lderFun)(u = resp[i, ], theta = est[i], params = params, type = "MLE")}
+    d[i]    <- {lderFun(u = resp[i, ], theta = est[i], params = params, type = "WLE") -
+    	          lderFun(u = resp[i, ], theta = est[i], params = params, type = "MLE")}
   } # END for i LOOP
                           
   est <- pmax(l, pmin(u, est))  
