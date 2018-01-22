@@ -2,7 +2,17 @@
 useDynLib(catIrt)
 
 # Imported Packages
-importFrom(numDeriv, hessian)
+importFrom(numDeriv,
+           hessian)
+importFrom(grDevices,
+           devAskNewPage)
+importFrom(graphics,
+           abline, axis, lines, mtext, plot, segments)
+importFrom(stats,
+           cor, dnorm, logLik, optimize, qnorm, runif,
+           sd, uniroot)
+importFrom(utils,
+           modifyList, setTxtProgressBar, txtProgressBar)
 
 # Main CAT Functions:
 export(catIrt, simIrt)
