@@ -121,7 +121,7 @@ Embretson, S. E., & Reise, S. P.  (2000).  \emph{Item Response Theory for Psycho
 
 Kullback, S., & Leibler, R. A.  (1951).  On information and sufficiency.  \emph{The Annals of Mathematical Statistics}, \emph{22}, 79 -- 86.
 
-van dr Linden, W. J. & Pashley, P. J.  (2010).  Item selection and ability estimation in adaptive testing.  In W. J. van der Linden & C. A. W. Glas (Eds.), \emph{Elements of Adaptive Testing}.  New York, NY: Springer.
+van der Linden, W. J. & Pashley, P. J.  (2010).  Item selection and ability estimation in adaptive testing.  In W. J. van der Linden & C. A. W. Glas (Eds.), \emph{Elements of Adaptive Testing}.  New York, NY: Springer.
 }
 
 \author{

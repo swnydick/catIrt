@@ -1,9 +1,14 @@
 Package: catIrt
 Type: Package
 Version: 0.5.1
-Title: An R Package for Simulating IRT-Based Computerized Adaptive Tests
-Author: Steven W. Nydick
-Maintainer: Steven W. Nydick <swnydick@gmail.com>
+Title: Simulate IRT-Based Computerized Adaptive Tests
+Authors@R: c(
+  person(given = "Steven",
+         family = "Nydick",
+         role = c("cre", "aut"),
+         email = "swnydick@gmail.com",
+         comment = c(ORCID = "0000-0002-2908-1188")))
+Maintainer: Steven Nydick <swnydick@gmail.com>
 URL: https://github.com/swnydick/catIrt
 BugReports: https://github.com/swnydick/catIrt/issues
 Depends: R (>= 2.11.0), numDeriv (>= 2012.3-1)
@@ -12,6 +17,9 @@ Description: Functions designed to simulate data that conform to basic
           unidimensional IRT models (for now 3-parameter binary response models
           and graded response models) along with Post-Hoc CAT simulations of
           those models given various item selection methods, ability estimation
-          methods, and termination criteria.
+          methods, and termination criteria. See
+          Wainer (2000) <doi:10.4324/9781410605931>,
+          van der Linden & Pashley (2010) <doi:10.1007/978-0-387-85461-8_1>,
+          and Eggen (1999) <doi:10.1177/01466219922031365> for more details.
 License: GPL (>= 2)
 LazyLoad: yes

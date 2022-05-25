@@ -407,7 +407,7 @@ testing procedure.  In D. J. Weiss (Ed.), \emph{New horizons in testing: Latent 
 Thompson, N. A. (2009).  Using the generalized likelihood ratio as a termination criterion.  In D. J. Weiss (Ed.),
 \emph{Proceedings of the 2009 GMAC conference on computerized adaptive testing}.
 
-Wainer, H. (Ed.). (2000). \emph{Computerized Adaptive Testing: A Primer (2nd Edition)}. Mahwah, NJ: ELawrence Erlbaum Associates.
+Wainer, H. (Ed.). (2000). \emph{Computerized Adaptive Testing: A Primer (2nd Edition)}. Mahwah, NJ: Lawrence Erlbaum Associates.
 
 Wald, A.  (1945).  Sequential tests of statistical hypotheses.  \emph{Annals of Mathematical Statistics}, \emph{16}, 117 -- 186.
 

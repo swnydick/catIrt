@@ -1,5 +1,7 @@
 # catIrt 0.5.1
 
+* Renamed package to remove "An R Package for" given redundancies and added
+  some references.
 * Added function exports from base R packages, and fixed C code boilerplate.
 * Removed the implicit rounding in the estimation functions.
 * Changed the `NEWS.Rd` file to `NEWS.md` file to be more consistent with
