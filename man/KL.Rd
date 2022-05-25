@@ -103,7 +103,7 @@ van dr Linden, W. J. & Pashley, P. J.  (2010).  Item selection and ability estim
 }
 
 \author{
-Steven W. Nydick \email{nydic001@umn.edu}
+Steven W. Nydick \email{swnydick@gmail.com}
 }
 
 \note{

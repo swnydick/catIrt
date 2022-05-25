@@ -201,7 +201,7 @@ Veerkamp, W. J. J., & Berger, M. P. F.  (1997).  Some new item selection criteri
 }
 
 \author{
-Steven W. Nydick \email{nydic001@umn.edu}
+Steven W. Nydick \email{swnydick@gmail.com}
 }
 
 \seealso{

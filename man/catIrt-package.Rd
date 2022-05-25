@@ -22,5 +22,5 @@ LazyLoad: \tab yes\cr
 
 }
 \author{
-Maintainer: Steven W. Nydick \email{nydic001@umn.edu}
+Maintainer: Steven W. Nydick \email{swnydick@gmail.com}
 }

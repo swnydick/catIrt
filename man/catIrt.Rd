@@ -415,7 +415,7 @@ Weiss, D. J., & Kingsbury, G. G. (1984). Application of computerized adaptive te
 }
 
 \author{
-Steven W. Nydick \email{nydic001@umn.edu}
+Steven W. Nydick \email{swnydick@gmail.com}
 }
 
 \seealso{

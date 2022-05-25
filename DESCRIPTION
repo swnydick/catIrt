@@ -3,9 +3,9 @@ Type: Package
 Version: 0.5.1
 Title: An R Package for Simulating IRT-Based Computerized Adaptive Tests
 Author: Steven W. Nydick
-Maintainer: Steven W. Nydick <nydic001@umn.edu>
-URL: http://github.com/swnydick/catIrt
-BugReports: http://github.com/swnydick/catIrt/issues
+Maintainer: Steven W. Nydick <swnydick@gmail.com>
+URL: https://github.com/swnydick/catIrt
+BugReports: https://github.com/swnydick/catIrt/issues
 Depends: R (>= 2.11.0), numDeriv (>= 2012.3-1)
 Suggests: irtoys, ltm, catR
 Description: Functions designed to simulate data that conform to basic

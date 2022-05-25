@@ -80,7 +80,7 @@ van der Linden, W. J. & Hambleton, R. K.  (2010).  \emph{Handbook of Modern Item
 }
 
 \author{
-Steven W. Nydick \email{nydic001@umn.edu}
+Steven W. Nydick \email{swnydick@gmail.com}
 }
 
 \seealso{
