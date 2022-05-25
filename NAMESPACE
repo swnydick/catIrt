@@ -1,5 +1,6 @@
 # C Source Code (package name, not original file name):
-useDynLib(catIrt)
+useDynLib(catIrt,
+          .registration = TRUE)
 
 # Imported Packages
 importFrom(numDeriv,
