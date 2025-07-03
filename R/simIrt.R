@@ -93,7 +93,7 @@ function( theta = seq(-3, 3, by = .1), # a scalar/vector of theta values
     cat("\nBinary response model simulation:\n   ",
          length(theta), " simulee, ",  nrow(params), " items\n\n")
   } else if(mod == "brm"){
-     cat("\nBinary response model simulation:\n   ",
+    cat("\nBinary response model simulation:\n   ",
          length(theta), " simulees, ", nrow(params), " items\n\n")
   } else if(mod == "grm" & length(theta) == 1){
     cat("\nGraded response model simulation:\n   ",

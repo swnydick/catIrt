@@ -8,7 +8,6 @@ including response simulation, item selection methods, ability estimation method
 and test termination methods.  Unique in \code{catIrt} is support for the graded
 response model (and, soon, other polytomous models) along with expanding support
 for classification CAT (including an implementation of the SPRT, GLR, and CI methods).
-}
 
 }
 \author{

@@ -24,22 +24,28 @@ function( params, resp, mod,
   cat_sem.i   <- NULL; rm(cat_sem.i)
 
 # A vector to store selection rates (if needed):
-  S        <- NULL
+  S           <- NULL
+  is_expos    <- catMiddle$expos == "SH"
   
 ## FOR EACH ITEM IN STARTCAT ##
   for(j in 1:catStart$n.start){
   	
-    stp <- 0  # for the S-H iterature item selection
+    stp <- 0  # for the S-H iterative item selection
   	
 #######################
 ## I. SELECT AN ITEM ##
 #######################
 
     while(!stp){
+      
+      # if we have no items left, allow selected items to be administered
+      if(isTRUE(is_expos) && !any(it_flags == 0)){
+        it_flags[it_flags == 2] <- 0
+      }
     	
       it_select <- itChoose( left_par = params[!it_flags, -ncol(params)], mod = mod,
                              numb = catStart$n.select, n.select = catStart$n.select,
-                             cat_par = params[it_flags, -ncol(params)],
+                             cat_par = params[it_flags == 1, -ncol(params)],
                              cat_resp = cat_resp.i[1:(j - 1)],
                              cat_theta = cat_theta.i[j],
                              select = catStart$select, at = catStart$at,
@@ -62,7 +68,7 @@ function( params, resp, mod,
 #  - b) add the item to the total list of selected items,
 #  - c) pick a uniform number (u) between 0 and 1
 #  - d) If u < k, administer the item, otherwise repeat!
-      if(catMiddle$expos == "SH"){
+      if(isTRUE(is_expos)){
     	
         k <- params[pl, ncol(params)]
         S <- c(S, cat_it.i[j])
@@ -70,13 +76,15 @@ function( params, resp, mod,
 # If u < k...    	
         if(runif(1) < k){
 
-# ... administer the item and save the parameters:
-    	      cat_resp.i[j]  <<- resp[pl]
-    	      cat_par.i[j, ] <<- params[pl, ]
-    	      stp            <- 1
-    	  
-        } # END if STATEMENT
-    	
+          # administer the item and save the parameters:
+    	    cat_resp.i[j]  <<- resp[pl]
+          cat_par.i[j, ] <<- params[pl, ]
+    	    stp            <- 1
+        } else {
+          # otherwise mark the item as chosen but not administered
+          it_flags[ pl ] <<- 2
+          it_flags[ pl ] <-  2
+        }
       } else{
       	
 # IF NO S-H ITEM EXPOSURE, JUST SAVE THE ITEM:

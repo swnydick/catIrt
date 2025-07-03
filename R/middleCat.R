@@ -36,13 +36,19 @@ function( params, resp, mod,
   S        <- NULL               # a vector to store selection rates
   j        <- nrow(cat_par) + 1  # the number of items administered (plus 1)
     
-  stp <- 0                       # for the S-H iterature item selection
+  stp      <- 0                  # for the S-H iterative item selection
+  is_expos <- catMiddle$expos == "SH"
 
 #######################
 ## I. SELECT AN ITEM ##
 #######################
 
   while(!stp){
+  
+      # if we have no items left, allow selected items to be administered
+      if(isTRUE(is_expos) && !any(it_flags == 0)){
+        it_flags[it_flags == 2] <- 0
+      }
     
       it_select <- itChoose( left_par = params[!it_flags, -ncol(params)], mod = mod,
                              numb = catMiddle$n.select, n.select = catMiddle$n.select,
@@ -73,12 +79,15 @@ function( params, resp, mod,
 # If u < k...    	
       if(runif(1) < k){
 
-# ... administer the item and save the parameters:
+        # administer the item and save the parameters:
     	  cat_resp.i[j]  <<- resp[pl]
     	  cat_par.i[j, ] <<- params[pl, ]
     	  stp            <- 1
     	  
-    	} # END if STATEMENT
+      } else{
+        # otherwise mark the item as chosen but not administered
+        it_flags[ pl ] <<- 2
+    	}
     	
       } else{
       	

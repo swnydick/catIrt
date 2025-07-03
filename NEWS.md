@@ -3,6 +3,8 @@
 * Removed details table from the `catIrt-package.Rd` help file given the
   mismatched version number and dynamic version of description metadata.
 * Changed required `R` version to be after the base `R` pipe was added.
+* Fixed bug in the starting portion of the CAT that would error for
+  Sympson-Hetter exposure control if items were selected but not administered.
 
 # catIrt 0.5.1
 
