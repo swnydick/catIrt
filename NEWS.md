@@ -1,3 +1,9 @@
+# catIrt 0.5.2
+
+* Removed details table from the `catIrt-package.Rd` help file given the
+  mismatched version number and dynamic version of description metadata.
+* Changed required `R` version to be after the base `R` pipe was added.
+
 # catIrt 0.5.1
 
 * Renamed package to remove "An R Package for" given redundancies and added
