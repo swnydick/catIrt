@@ -47,7 +47,8 @@ function( params, resp, mod,
   
       # if we have no items left, allow selected items to be administered
       if(isTRUE(is_expos) && !any(it_flags == 0)){
-        it_flags[it_flags == 2] <- 0
+        it_flags[it_flags == 2] <<- 0
+        it_flags[it_flags == 2] <-  0
       }
     
       it_select <- itChoose( left_par = params[!it_flags, -ncol(params)], mod = mod,
@@ -64,7 +65,8 @@ function( params, resp, mod,
       cat_it.i[j] <<- sample(c(it_select, it_select), size = 1)
     
 # Mark the item (getting rid of it), and save the location of the item:
-      it_flags[ pl <- which(params[ , 1] == cat_it.i[j]) ] <<- 1
+      it_flags[ pl <- which(params[ , 1] == cat_it.i[j]) ] <<- 1 # global
+      it_flags[ pl ]                                       <-  1 # local
                                               
 # IF S-H ITEM EXPOSURE:
 #  - a) find the item exposure prob (k),
@@ -87,6 +89,7 @@ function( params, resp, mod,
       } else{
         # otherwise mark the item as chosen but not administered
         it_flags[ pl ] <<- 2
+        it_flags[ pl ] <-  2
     	}
     	
       } else{
